@@ -43,6 +43,7 @@ from bfcl_eval.model_handler.local_inference.granite import (
     GraniteFunctionCallingHandler,
 )
 from bfcl_eval.model_handler.local_inference.granite_3 import Granite3FCHandler
+from bfcl_eval.model_handler.local_inference.granite_3_3 import Granite33FCHandler
 from bfcl_eval.model_handler.local_inference.hammer import HammerHandler
 from bfcl_eval.model_handler.local_inference.llama import LlamaHandler
 from bfcl_eval.model_handler.local_inference.llama_3_1 import LlamaHandler_3_1
@@ -1419,6 +1420,18 @@ local_inference_model_map = {
         org="IBM",
         license="Apache-2.0",
         model_handler=Granite3FCHandler,
+        input_price=None,
+        output_price=None,
+        is_fc_model=True,
+        underscore_to_dot=False,
+    ),
+"ibm-granite/granite-3.3-8b-instruct": ModelConfig(
+        model_name="ibm-granite/granite-3.3-8b-instruct",
+        display_name="Granite-3.3-8B-Instruct",
+        url="https://huggingface.co/ibm-granite/granite-3.3-8b-instruct",
+        org="IBM",
+        license="Apache-2.0",
+        model_handler=Granite33FCHandler,
         input_price=None,
         output_price=None,
         is_fc_model=True,
