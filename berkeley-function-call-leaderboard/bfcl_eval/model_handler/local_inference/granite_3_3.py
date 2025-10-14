@@ -5,6 +5,7 @@ from typing import Any
 from bfcl_eval.model_handler.local_inference.base_oss_handler import OSSHandler
 from bfcl_eval.model_handler.utils import convert_to_function_call
 from overrides import override
+import pdb
 
 
 class Granite33FCHandler(OSSHandler):
@@ -93,6 +94,7 @@ class Granite33FCHandler(OSSHandler):
         """
         Given an input_string, parse out all of the tool calls made in the body.
         """
+        pdb.set_trace()
         input_string = input_string.lstrip("ASSISTANT:")
         input_string = input_string.lstrip()
 
@@ -225,6 +227,7 @@ class Granite33FCHandler(OSSHandler):
         {%- endfor -%}
         """
         # formatted input prompt
+        pdb.set_trace()
         formatted_prompt = ""
 
         if messages[0]["role"] == "system":
