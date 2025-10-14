@@ -94,6 +94,9 @@ class Granite33FCHandler(OSSHandler):
         Given an input_string, parse out all of the tool calls made in the body.
         """
         input_string = input_string.lstrip("ASSISTANT:")
+        input_string = input_string.lstrip("assistant:")
+        input_string = input_string.lstrip("ASSISTANT")
+        input_string = input_string.lstrip("assistant")
         input_string = input_string.lstrip()
 
         if "<tool_call>" in input_string:
@@ -102,6 +105,16 @@ class Granite33FCHandler(OSSHandler):
             pattern = r"<tool_call>(.*)"
         else:
             pattern = r"<\|tool_call\|>(.*)"
+
+        if "tool_call" not in input_string:
+            pattern = r'\[\s*\{.*?\}\s*(?:,\s*\{.*?\}\s*)*\]'
+            match = re.search(pattern, input_string, re.DOTALL)
+            if match:
+                json_str = match.group(0)
+                data = json.loads(json_str)
+                return data
+            else:
+                return []
 
         matches = re.findall(pattern, input_string, re.DOTALL)
         # process matches into a list of dictionaries
