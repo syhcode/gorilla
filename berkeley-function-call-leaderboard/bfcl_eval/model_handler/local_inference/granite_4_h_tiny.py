@@ -29,13 +29,13 @@ class Granite4hTinyHandler(OSSHandler):
         self.model_name_huggingface = model_name.replace("-FC", "")
 
     # copied from phi_fc.py
-    # @override
-    # def _pre_query_processing_prompting(self, test_entry: dict) -> dict:
-    #     functions: list = test_entry["function"]
-    #
-    #     # Granite use its own system prompt
-    #
-    #     return {"message": [], "function": functions}
+    @override
+    def _pre_query_processing_prompting(self, test_entry: dict) -> dict:
+        functions: list = test_entry["function"]
+
+        # Granite use its own system prompt
+
+        return {"message": [], "function": functions}
 
     # copied from phi_fc.py
     @override
@@ -73,20 +73,20 @@ class Granite4hTinyHandler(OSSHandler):
         }
 
     # copied from phi_fc.py
-    # @override
-    # def _add_assistant_message_prompting(
-    #     self, inference_data: dict, model_response_data: dict
-    # ) -> dict:
-    #     """
-    #     Add assistant message to the chat history.
-    #     """
-    #     inference_data["message"].append(
-    #         {
-    #             "role": "assistant",
-    #             "content": model_response_data["model_responses_message_for_chat_history"],
-    #         }
-    #     )
-    #     return inference_data
+    @override
+    def _add_assistant_message_prompting(
+        self, inference_data: dict, model_response_data: dict
+    ) -> dict:
+        """
+        Add assistant message to the chat history.
+        """
+        inference_data["message"].append(
+            {
+                "role": "assistant",
+                "content": model_response_data["model_responses_message_for_chat_history"],
+            }
+        )
+        return inference_data
 
     # copied over from phi_fc.py
     @staticmethod
