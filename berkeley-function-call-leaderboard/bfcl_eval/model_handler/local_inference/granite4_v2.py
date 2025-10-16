@@ -1,8 +1,8 @@
 import json
 
 
-from bfcl.model_handler.local_inference.base_oss_handler import OSSHandler
-from bfcl.model_handler.utils import (
+from bfcl_eval.model_handler.local_inference.base_oss_handler import OSSHandler
+from bfcl_eval.model_handler.utils import (
     convert_to_tool,
     func_doc_language_specific_pre_processing,
 )
