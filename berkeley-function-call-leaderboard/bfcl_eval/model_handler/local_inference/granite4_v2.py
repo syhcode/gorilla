@@ -8,6 +8,7 @@ from bfcl_eval.model_handler.utils import (
 )
 from overrides import override
 import re
+import pdb
 
 
 class Granite4LocalHandlerV2(OSSHandler):
@@ -17,6 +18,7 @@ class Granite4LocalHandlerV2(OSSHandler):
 
     @override
     def _format_prompt(self, messages, function):
+        pdb.set_trace()
         formatted_prompt = self.tokenizer.apply_chat_template(
             messages, function, tokenize=False, add_generation_prompt=True
         )
@@ -24,6 +26,7 @@ class Granite4LocalHandlerV2(OSSHandler):
 
     @override
     def decode_ast(self, result, language="Python"):
+        pdb.set_trace()
         # print(result)
         # import ipdb; ipdb.set_trace()
 
@@ -78,6 +81,7 @@ class Granite4LocalHandlerV2(OSSHandler):
 
     @override
     def decode_execute(self, result):
+        pdb.set_trace()
         decoded_outputs = []
         for decoded_output in self.decode_ast(result):
             if isinstance(decoded_output, dict):
@@ -89,6 +93,7 @@ class Granite4LocalHandlerV2(OSSHandler):
 
     @override
     def _pre_query_processing_prompting(self, test_entry: dict) -> dict:
+        pdb.set_trace()
         functions: list = test_entry["function"]
         test_category: str = test_entry["id"].rsplit("_", 1)[0]
 
