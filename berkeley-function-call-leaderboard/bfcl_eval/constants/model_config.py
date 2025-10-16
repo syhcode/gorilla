@@ -46,6 +46,7 @@ from bfcl_eval.model_handler.local_inference.glm import GLMHandler
 from bfcl_eval.model_handler.local_inference.granite import (
     GraniteFunctionCallingHandler,
 )
+from bfcl.model_handler.local_inference.granite4_v2 import Granite4LocalHandlerV2
 from bfcl_eval.model_handler.local_inference.granite_3 import Granite3FCHandler
 from bfcl_eval.model_handler.local_inference.hammer import HammerHandler
 from bfcl_eval.model_handler.local_inference.hermes import HermesHandler
@@ -1416,6 +1417,18 @@ local_inference_model_map = {
         output_price=None,
         is_fc_model=False,
         underscore_to_dot=True,
+    ),
+    "local-granite4-v2": ModelConfig(
+        model_name="local-granite4-v2",
+        display_name="local-granite4-v2",
+        url="local-granite4-v2",
+        org="IBM",
+        license="Apache-2.0",
+        model_handler=Granite4LocalHandlerV2,
+        input_price=None,
+        output_price=None,
+        is_fc_model=False,
+        underscore_to_dot=False,
     ),
     "MadeAgents/Hammer2.1-7b": ModelConfig(
         model_name="MadeAgents/Hammer2.1-7b",
