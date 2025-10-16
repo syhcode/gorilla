@@ -46,7 +46,7 @@ from bfcl_eval.model_handler.local_inference.glm import GLMHandler
 from bfcl_eval.model_handler.local_inference.granite import (
     GraniteFunctionCallingHandler,
 )
-from bfcl.model_handler.local_inference.granite4_v2 import Granite4LocalHandlerV2
+from bfcl_eval.model_handler.local_inference.granite4_v2 import Granite4LocalHandlerV2
 from bfcl_eval.model_handler.local_inference.granite_3 import Granite3FCHandler
 from bfcl_eval.model_handler.local_inference.hammer import HammerHandler
 from bfcl_eval.model_handler.local_inference.hermes import HermesHandler
