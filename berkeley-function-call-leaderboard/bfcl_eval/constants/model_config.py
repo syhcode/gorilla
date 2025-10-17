@@ -47,6 +47,7 @@ from bfcl_eval.model_handler.local_inference.granite import (
     GraniteFunctionCallingHandler,
 )
 from bfcl_eval.model_handler.local_inference.granite4_v2 import Granite4LocalHandlerV2
+from bfcl_eval.model_handler.local_inference.granite4_v2_think import Granite4LocalHandlerV2Thinking
 from bfcl_eval.model_handler.local_inference.granite_3 import Granite3FCHandler
 from bfcl_eval.model_handler.local_inference.hammer import HammerHandler
 from bfcl_eval.model_handler.local_inference.hermes import HermesHandler
@@ -1425,6 +1426,30 @@ local_inference_model_map = {
         org="IBM",
         license="Apache-2.0",
         model_handler=Granite4LocalHandlerV2,
+        input_price=None,
+        output_price=None,
+        is_fc_model=False,
+        underscore_to_dot=False,
+    ),
+    "local-granite4-v2-think": ModelConfig(
+        model_name="local-granite4-v2-think",
+        display_name="local-granite4-v2-think",
+        url="local-granite4-v2",
+        org="IBM",
+        license="Apache-2.0",
+        model_handler=Granite4LocalHandlerV2Thinking,
+        input_price=None,
+        output_price=None,
+        is_fc_model=False,
+        underscore_to_dot=False,
+    ),
+    "local-granite4-v2-sft-gt-think": ModelConfig(
+        model_name="local-granite4-v2-sft-gt",
+        display_name="local-granite4-v2-sft-gt",
+        url="local-granite4-v2",
+        org="IBM",
+        license="Apache-2.0",
+        model_handler=Granite4LocalHandlerV2Thinking,
         input_price=None,
         output_price=None,
         is_fc_model=False,
