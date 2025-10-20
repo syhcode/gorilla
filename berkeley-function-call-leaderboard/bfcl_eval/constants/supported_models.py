@@ -119,6 +119,7 @@ SUPPORTED_MODELS = [
     "ibm-granite/granite-20b-functioncalling",
     "local-granite4-v2",
     "local-granite4-v2-sft-gt-nothink",
+    "local-granite3-3",
     "local-granite4-v2-think",
     "ibm-granite/granite-4.0-h-tiny",
     "MadeAgents/Hammer2.1-7b",
