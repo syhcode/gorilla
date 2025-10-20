@@ -49,7 +49,7 @@ from bfcl_eval.model_handler.local_inference.granite import (
 from bfcl_eval.model_handler.local_inference.granite4_v2 import Granite4LocalHandlerV2
 from bfcl_eval.model_handler.local_inference.granite4_v2_think import Granite4LocalHandlerV2Thinking
 from bfcl_eval.model_handler.local_inference.granite_3 import Granite3FCHandler
-from bfcl_eval.model_handler.local_inference.granite_3_3 import Granite33FCHandler
+from bfcl_eval.model_handler.local_inference.granite3_3 import Granite33FCHandler
 from bfcl_eval.model_handler.local_inference.hammer import HammerHandler
 from bfcl_eval.model_handler.local_inference.hermes import HermesHandler
 from bfcl_eval.model_handler.local_inference.llama import LlamaHandler
