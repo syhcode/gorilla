@@ -9,7 +9,7 @@ from bfcl_eval.model_handler.utils import (
 from overrides import override
 import re
 import typing as t
-
+import pdb
 
 class Granite33FCHandler(OSSHandler):
     """
@@ -30,6 +30,7 @@ class Granite33FCHandler(OSSHandler):
         )
 
         # formatted input prompt
+        pdb.set_trace()
         return formatted_prompt
 
     # copied from phi_fc.py
