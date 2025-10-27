@@ -118,7 +118,7 @@ SUPPORTED_MODELS = [
     "microsoft/Phi-4-mini-instruct-FC",
     "ibm-granite/granite-20b-functioncalling",
     "local-granite4-v2",
-    "local-granite4-v2-sft-gt-nothink",
+    "local-granite4-micro-v2",
     "local-granite3-3",
     "local-granite4-v2-think",
     "ibm-granite/granite-4.0-h-tiny",

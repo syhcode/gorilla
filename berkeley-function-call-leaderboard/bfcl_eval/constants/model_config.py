@@ -1456,10 +1456,10 @@ local_inference_model_map = {
         is_fc_model=False,
         underscore_to_dot=False,
     ),
-    "local-granite4-v2-sft-gt-nothink": ModelConfig(
-        model_name="local-granite4-v2-sft-gt-nothink",
-        display_name="local-granite4-v2-sft-gt-nothink",
-        url="local-granite4-v2",
+    "local-granite4-micro-v2": ModelConfig(
+        model_name="local-granite4-micro-v2",
+        display_name="local-granite4-micro-v2",
+        url="local-granite4-micro-v2",
         org="IBM",
         license="Apache-2.0",
         model_handler=Granite4LocalHandlerV2,
