@@ -1480,7 +1480,7 @@ local_inference_model_map = {
         is_fc_model=False,
         underscore_to_dot=False,
     ),
-"local-granite4-micro-v2": ModelConfig(
+    "local-granite4-micro-v2": ModelConfig(
         model_name="local-granite4-micro-v2",
         display_name="local-granite4-micro-v2",
         url="local-granite4-micro-v2",
@@ -1492,6 +1492,31 @@ local_inference_model_map = {
         is_fc_model=False,
         underscore_to_dot=False,
     ),
+    "local-granite4-micro-1": ModelConfig(
+        model_name="local-granite4-micro-1",
+        display_name="local-granite4-micro-1",
+        url="local-granite4-micro-1",
+        org="IBM",
+        license="Apache-2.0",
+        model_handler=Granite4LocalHandlerV2,
+        input_price=None,
+        output_price=None,
+        is_fc_model=False,
+        underscore_to_dot=False,
+    ),
+    "local-granite4-micro-2": ModelConfig(
+        model_name="local-granite4-micro-2",
+        display_name="local-granite4-micro-2",
+        url="local-granite4-micro-2",
+        org="IBM",
+        license="Apache-2.0",
+        model_handler=Granite4LocalHandlerV2,
+        input_price=None,
+        output_price=None,
+        is_fc_model=False,
+        underscore_to_dot=False,
+    ),
+
     "MadeAgents/Hammer2.1-7b": ModelConfig(
         model_name="MadeAgents/Hammer2.1-7b",
         display_name="Hammer2.1-7b (FC)",

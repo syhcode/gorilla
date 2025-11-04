@@ -120,7 +120,9 @@ SUPPORTED_MODELS = [
     "local-granite4-v2",
     "local-granite4-micro-v2",
     "local-granite4-tiny-1",
-    "local-granite4-tiny-2"
+    "local-granite4-tiny-2",
+    "local-granite4-micro-1",
+    "local-granite4-micro-2",
     "local-granite3-3",
     "local-granite4-v2-think",
     "ibm-granite/granite-4.0-h-tiny",
