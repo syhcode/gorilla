@@ -119,6 +119,8 @@ SUPPORTED_MODELS = [
     "ibm-granite/granite-20b-functioncalling",
     "local-granite4-v2",
     "local-granite4-micro-v2",
+    "local-granite4-tiny-1",
+    "local-granite4-tiny-2"
     "local-granite3-3",
     "local-granite4-v2-think",
     "ibm-granite/granite-4.0-h-tiny",
