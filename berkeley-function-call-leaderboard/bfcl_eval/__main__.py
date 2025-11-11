@@ -122,6 +122,10 @@ def generate(
     num_threads: int = typer.Option(1, help="The number of threads to use."),
     gpu_memory_utilization: float = typer.Option(0.9, help="The GPU memory utilization."),
     backend: str = typer.Option("vllm", help="The backend to use for the model."),
+    port: str = typer.Option(
+            "1053",
+            help="port used",
+        ),
     skip_server_setup: bool = typer.Option(
         False,
         "--skip-server-setup",
@@ -170,6 +174,8 @@ def generate(
         run_ids=run_ids,
     )
     load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)  # Load the .env file
+    os.environ['LOCAL_SERVER_PORT'] = port
+    print("port used:", port)
     generation_main(args)
 
 
