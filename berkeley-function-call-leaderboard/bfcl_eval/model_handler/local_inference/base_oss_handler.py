@@ -34,8 +34,9 @@ class OSSHandler(BaseHandler, EnforceOverrides):
 
         # Read from env vars with fallbacks
         self.vllm_host = os.getenv("VLLM_ENDPOINT", "localhost")
-        self.vllm_port = os.getenv("VLLM_PORT", VLLM_PORT)
 
+        self.vllm_port = os.getenv("VLLM_PORT", VLLM_PORT)
+        print("vllm port", self.vllm_port)
         self.base_url = f"http://{self.vllm_host}:{self.vllm_port}/v1"
         self.client = OpenAI(base_url=self.base_url, api_key="EMPTY")
 

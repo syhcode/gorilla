@@ -175,7 +175,8 @@ def generate(
     )
     load_dotenv(dotenv_path=DOTENV_PATH, verbose=True, override=True)  # Load the .env file
     os.environ['LOCAL_SERVER_PORT'] = port
-    print("port used:", port)
+    os.environ["VLLM_PORT"] = port
+    # print("port used:", port)
     generation_main(args)
 
 
